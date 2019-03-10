@@ -12,7 +12,7 @@ docker build -t local/debugger .
 docker run --privileged --rm -ti -v $(pwd):/output -v /usr/src:/usr/src:ro -v /lib/modules:/lib/modules:ro -v /sys:/sys -v /proc:/proc  local/debugger
 ```
 
-## create off cpu flamegraph
+## create off cpu time flamegraph
 ```
 offcputime -f 5 > /tmp/offcputime ; flamegraph.pl /tmp/offcputime > /output/offcputime.svg
 ```
